@@ -1,9 +1,9 @@
 ## Стек
-- Laravel 10
+- Laravel 12
 - PHP 8.2
 - MariaDB
-- Bootstrap 5
-- Knockout.js 3.5
+- Bootstrap
+- Knockout.js
 - Vite (для сборки фронтенда)
 - React
 

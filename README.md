@@ -11,7 +11,20 @@
 ## Установка и запуск проекта
 
 ### Установка зависимостей и начальная настройка
-Перед запуском composer run setup убедитесь, что в файле .env (который создастся автоматически) верно указаны доступы к базе данных
+Перед запуском composer run setup необходимо создать файл `.env` из `.env.example` и верно указать доступ к базе данных
+
+Если mariadb запускается через OPanel, то вот верные настройки для `.env`:
+
+```env
+...
+DB_CONNECTION=mysql
+DB_HOST=MariaDB-10.4
+DB_PORT=3306
+DB_DATABASE=shopList
+DB_USERNAME=root
+DB_PASSWORD=
+...
+```
 
 ``` Bash
 composer install

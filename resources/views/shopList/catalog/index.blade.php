@@ -1,32 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Каталог | shopList</title>
-
-    {{-- Подключение фавиконки --}}
-{{--    @include('shopList.tpl.favicon')--}}
-
-    {{-- Подключение скриптов --}}
-    @include('shopList.partials.scripts')
-
-    {{-- Ссылки на статику через Vite --}}
+﻿@extends('shopList.layouts.app')
+@section('title', 'Каталог | shopList')
+@push('vite')
     @vite([
-        'resources/css/app.css',
-        'resources/css/header.css',
         'resources/css/productCard.css',
         'resources/css/catalog.css',
-        'resources/js/app.js',
-        'resources/js/catalog.js'
+        'resources/js/catalog.js',
     ])
-</head>
-<body>
-
-@include('shopList.partials.header')
-
-<main class="catalog-page modular-grid">
+@endpush
+@section('main-class', 'catalog-page modular-grid')
+@section('content')
     <h1 style="margin-bottom: 20px">Каталог</h1>
     @dump([
         'filters' => $filters,
@@ -41,46 +23,38 @@
             <div class="row align-items-end">
                 <div class="col-md-4">
                     <label>Поиск</label>
-                    {{-- request('search') — удобный доступ к get параметрам в blade --}}
                     <input type="text" name="search" class="form-control"
                            placeholder="Название товара"
                            value="{{ request('search') }}">
                 </div>
-
                 <div class="col-md-3">
                     <label>Цена от</label>
                     <input type="number" name="min_price" class="form-control"
                            placeholder="0"
                            value="{{ request('min_price') }}">
                 </div>
-
                 <div class="col-md-3">
                     <label>Цена до</label>
                     <input type="number" name="max_price" class="form-control"
                            placeholder="10000"
                            value="{{ request('max_price') }}">
                 </div>
-
                 <div class="col-md-2">
                     <button type="submit" class="btn btn-primary w-100">Найти</button>
                 </div>
             </div>
-
             <div class="mt-2">
                 <a href="{{ route('catalog.index') }}" class="text-secondary small">Сбросить фильтры</a>
             </div>
         </form>
     </div>
-
     {{-- Секция с товарами, Knockout обрабатывает foreach --}}
     <div class="catalog-page__products-grid list-products" data-bind="foreach: products">
-        @include('shopList.components.product-card')
+        <x-product-card />
     </div>
-
     <div data-bind="if: products().length === 0" class="text-center mt-5" style="display: none">
         <p class="text-muted">Товары не найдены</p>
     </div>
-
     {{-- Пагинация Knockout --}}
     <div class="mt-4 mb-5" data-bind="if: totalPages() > 1">
         <nav aria-label="Page navigation">
@@ -99,14 +73,12 @@
             </ul>
         </nav>
     </div>
-</main>
 
-{{-- Передача данных из PHP в JS --}}
+@endsection
+
+@push('scripts')
 <script>
     window.catalogData = @json($catalogData);
     window.cartData = @json($cartData);
 </script>
-
-
-</body>
-</html>
+@endpush

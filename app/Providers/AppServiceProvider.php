@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\CartService;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
@@ -12,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // Регистрируем CartService как singleton, чтобы за один запрос
+        // корзина инициализировалась только один раз
+        $this->app->singleton(CartService::class);
     }
 
     /**
@@ -20,24 +23,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Вариант 1: Передать переменную ВО ВСЕ шаблоны (*)
-        // Это аналог того, как в router.class.php вы делали assign в Smarty глобально
-        View::composer('*', function ($view) {
+        // Передаём данные корзины во все шаблоны через CartService (singleton)
+        // Применяется как к partials.header, так и к главному layout
+        View::composer(
+            'shopList.layouts.app',
+            function ($view) {
+                /** @var CartService $cartService */
+                $cartService = app(CartService::class);
+                $cartData = $cartService->getCartData();
 
-            // Получаем корзину из сессии (или пустую структуру, если её нет)
-            $cartData = session('cart', [
-                'items' => [],
-                'cartSum' => 0,
-                'cartAmount' => 0
-            ]);
-
-            // Если нужно - подготавливаем данные (как в вашем старом коде array_values)
-            if (!empty($cartData['items'])) {
-                $cartData['items'] = array_values($cartData['items']);
+                $view->with('cartJson', json_encode($cartData, JSON_UNESCAPED_UNICODE));
             }
-
-            // Передаем переменную $cartJson во все вьюхи
-            $view->with('cartJson', json_encode($cartData, JSON_UNESCAPED_UNICODE));
-        });
+        );
     }
 }

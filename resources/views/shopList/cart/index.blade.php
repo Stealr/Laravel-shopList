@@ -1,29 +1,18 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Корзина | shopList</title>
+@extends('shopList.layouts.app')
 
-    {{-- Подключение скриптов --}}
-    @include('shopList.partials.scripts')
+@section('title', 'Корзина | shopList')
 
-    {{-- Ссылки на статику через Vite --}}
+@push('vite')
     @vite([
-        'resources/css/app.css',
-        'resources/css/header.css',
         'resources/css/productCard.css',
         'resources/css/cart.css',
-        'resources/js/app.js',
-        'resources/js/cartPage.js'
+        'resources/js/cartPage.js',
     ])
-</head>
-<body>
+@endpush
 
-@include('shopList.partials.header')
+@section('main-class', 'cart-page modular-grid')
 
-<main class="cart-page modular-grid">
+@section('content')
     <h1 style="margin-bottom: 20px">Корзина</h1>
 
     {{-- Пустая корзина --}}
@@ -37,7 +26,8 @@
         {{-- Список товаров --}}
         <div class="cart-items flex-grow-1" style="margin-right: 20px;">
             <div class="cart-products-grid" data-bind="foreach: items">
-                @include('shopList.components.product-card')
+                <x-product-card />
+                {{-- или можно @include('shopList.components.product-card') --}}
             </div>
         </div>
 
@@ -56,15 +46,14 @@
             </div>
         </div>
     </div>
-</main>
 
-{{-- Передача данных из PHP в JS --}}
+@endsection
+
+@push('scripts')
 <script>
     window.cartData = @json($cartData);
     window.cartPageData = @json($cartData);
 </script>
-
-</body>
-</html>
+@endpush
 
 

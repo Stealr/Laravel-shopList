@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shopList</title>
+@extends('shopList.layouts.app')
 
-    {{-- Подключение скриптов --}}
-    @include('shopList.partials.scripts')
+@section('title', 'shopList')
 
-    {{-- Ссылки на статику через Vite --}}
-    @vite([
-        'resources/css/app.css',
-        'resources/css/header.css',
-        'resources/js/app.js',
-    ])
-</head>
-<body>
+@section('main-class', 'main-page-page modular-grid')
 
-@include('shopList.partials.header')
-
-<!-- Main Content -->
-<main class="main-page-page modular-grid">
+@section('content')
     <h1>Это главная страница сайта</h1>
-</main>
-
-</body>
-</html>
+@endsection

@@ -5,7 +5,7 @@ use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\CartController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('shopList.mainPage');
 });
 
 // Маршруты для отображения страниц (только GET)

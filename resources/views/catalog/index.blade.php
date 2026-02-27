@@ -1,4 +1,4 @@
-﻿@extends('shopList.layouts.app')
+﻿﻿@extends('layouts.app')
 @section('title', 'Каталог | shopList')
 @push('vite')
     @vite([

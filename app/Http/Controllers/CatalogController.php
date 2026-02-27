@@ -53,7 +53,7 @@ class CatalogController extends Controller
         // Получаем данные корзины
         $cartData = $this->cartService->getCartData();
 
-        return view('shopList.catalog.index', [
+        return view('catalog.index', [
             'filters' => $request->all(),
             'catalogData' => $catalogData,
             'cartData' => $cartData,

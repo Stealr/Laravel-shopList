@@ -22,7 +22,7 @@ class CartController extends Controller
     {
         $cartData = $this->cartService->getCartData();
 
-        return view('shopList.cart.index', [
+        return view('cart.index', [
             'cartData' => $cartData,
         ]);
     }

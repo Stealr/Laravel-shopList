@@ -1,4 +1,4 @@
-@extends('shopList.layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Корзина | shopList')
 
@@ -22,12 +22,13 @@
     </div>
 
     {{-- Корзина с товарами --}}
-    <div data-bind="visible: items().length > 0" class="cart-content d-flex justify-content-between" style="display: none;">
+    <div data-bind="visible: items().length > 0" class="cart-content d-flex justify-content-between"
+         style="display: none;">
         {{-- Список товаров --}}
         <div class="cart-items flex-grow-1" style="margin-right: 20px;">
             <div class="cart-products-grid" data-bind="foreach: items">
-                <x-product-card />
-                {{-- или можно @include('shopList.components.product-card') --}}
+                <x-product-card/>
+                {{-- или можно @include('components.product-card') --}}
             </div>
         </div>
 
@@ -50,10 +51,10 @@
 @endsection
 
 @push('scripts')
-<script>
-    window.cartData = @json($cartData);
-    window.cartPageData = @json($cartData);
-</script>
+    <script>
+        window.cartData = @json($cartData);
+        window.cartPageData = @json($cartData);
+    </script>
 @endpush
 
 

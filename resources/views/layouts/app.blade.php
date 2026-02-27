@@ -7,7 +7,7 @@
     <title>@yield('title', 'shopList')</title>
 
     {{-- Подключение скриптов (cart.js и др.) --}}
-    @include('shopList.partials.scripts')
+    @include('partials.scripts')
 
     {{-- Базовые стили и скрипты --}}
     @vite([
@@ -24,7 +24,7 @@
 </head>
 <body>
 
-@include('shopList.partials.header')
+@include('partials.header')
 
 <main class="@yield('main-class', 'modular-grid')">
     @yield('content')

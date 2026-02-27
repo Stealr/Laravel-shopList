@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
         // Передаём данные корзины во все шаблоны через CartService (singleton)
         // Применяется как к partials.header, так и к главному layout
         View::composer(
-            'shopList.layouts.app',
+            'layouts.app',
             function ($view) {
                 /** @var CartService $cartService */
                 $cartService = app(CartService::class);

@@ -5,10 +5,10 @@
         </a>
 
         <div>
-            <a href="catalog">Каталог</a>
+            <a href="{{route('catalog.index')}}">Каталог</a>
         </div>
 
-        <a href="cart" id="cartLink">
+        <a href="{{route('cart.index')}}" id="cartLink">
             Корзина (<span id="cartAmount" data-bind="text: cartAmount">0</span>) - <span id="cartSum" data-bind="text: cartSum">0</span>₽
         </a>
     </div>

@@ -21,3 +21,8 @@ Route::prefix('api/cart')->group(function () {
     Route::post('/clear', [\App\Http\Controllers\Api\CartApiController::class, 'clearCart']);
 });
 
+// Личный кабинет — защищён middleware auth
+Route::view('/account/{path?}', 'account')
+    ->middleware(['auth', 'verified'])
+    ->where('path', '.*')
+    ->name('account');

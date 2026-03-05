@@ -14,4 +14,4 @@ Route::prefix('catalog')->group(function () {
 });
 
 
-
+// Здесь будут другие API маршруты для личного кабинета

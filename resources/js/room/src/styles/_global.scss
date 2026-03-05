@@ -1,0 +1,141 @@
+@use './variables' as *;
+@use './typography' as f;
+@use './mixins' as m;
+
+html {
+    // font-size: var(--global-scale);
+    // -webkit-font-smoothing: antialiased;
+}
+
+body {
+    // @include f.f.body1-medium;
+
+    // background-color: $background;
+    // color: $white-text-field-main-text-dark;
+}
+
+.tabler-icon {
+    stroke-width: 1.5;
+    // width: 20px;
+    // height: 20px;
+    color: black;
+    // color: var(--mantine-color-blue-filled);
+}
+
+// .app {
+//     min-height: 100vh;
+
+//     background-image: url('/src/assets/svg/Puppy_Prints.svg');
+//     // background-size: cover
+// }
+
+// .modular-grid {
+//     @include m.container-desktop;
+// }
+
+// .content {
+//     padding-top: $header-height;
+//     padding-bottom: 5.5rem;
+
+//     min-height: 100vh;
+//     box-sizing: border-box;
+
+//     // @include m.max-media('xl') {
+//     //     padding-bottom: 0;
+//     // }
+// }
+
+input {
+    outline: none;
+}
+
+button,
+textarea {
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+// h2 {
+//     @include f.title;
+// }
+
+// h3 {
+//     @include f.subtitle;
+//     margin-bottom: 2rem;
+// }
+
+// strong {
+//     font-weight: 700;
+// }
+
+// em {
+//     font-style: italic;
+// }
+
+// Шрифты для использования
+// .hero-title-font {
+//     @include f.hero-section-title;
+// }
+
+// .main-title-font {
+//     @include f.title;
+// }
+
+// .subtitle-font {
+//     @include f.subtitle;
+// }
+
+// .body-medium-font {
+//     @include f.body-medium;
+// }
+
+// .body-small-font {
+//     @include f.body-small;
+// }
+
+// .body-small-accent-font {
+//     @include f.body-small-accent;
+// }
+
+// .header-font {
+//     @include f.header;
+// }
+
+// .description-font {
+//     @include f.text-22-height;
+// }
+
+// .description-compact-font {
+//     @include f.text;
+// }
+
+// .button-font {
+//     @include f.button-text;
+// }
+
+// .placeholder-font {
+//     @include f.placeholder-text;
+// }
+
+// Scrollbar
+// ::-webkit-scrollbar {
+//   width: 8px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f100;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: $scrollbar-dark;
+//   border-radius: 7px;
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #5a5a5a;
+// }

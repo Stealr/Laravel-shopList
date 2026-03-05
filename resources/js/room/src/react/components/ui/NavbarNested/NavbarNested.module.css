@@ -1,0 +1,85 @@
+.navbar {
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 16px;
+    padding-top: 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    padding-bottom: 12px;
+}
+
+.logoIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.logoText {
+    display: flex;
+    flex-direction: column;
+}
+
+.logoTitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #000;
+}
+
+.logoSubtitle {
+    font-size: 11px;
+    color: #868e96;
+}
+
+.searchWrapper {
+    padding: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.links {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 16px;
+}
+
+.linksInner {
+    padding-top: 8px;
+}
+
+.footer {
+    border-top: 1px solid #dee2e6;
+    padding: 16px;
+}
+
+.settingsButton {
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    color: #000;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 100ms ease;
+    margin-bottom: 8px;
+
+    &:hover {
+        background-color: #f8f9fa;
+    }
+}

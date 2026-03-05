@@ -1,0 +1,62 @@
+/* Lato Regular */
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+/* Lato Italic */
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/Lato-Italic.ttf') format('truetype');
+}
+
+/* Lato Medium */
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Lato-Medium.ttf') format('truetype');
+}
+
+/* Lato Bold */
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Lato-Bold.ttf') format('truetype');
+}
+
+/* Lato BoldItalic */
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/fonts/Lato-BoldItalic.ttf') format('truetype');
+}
+
+/* Lato ExtraBold */
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/Lato-ExtraBold.ttf') format('truetype');
+}
+
+/* Roboto 600 */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/roboto-v49-cyrillic-600.woff2') format('woff2');
+}

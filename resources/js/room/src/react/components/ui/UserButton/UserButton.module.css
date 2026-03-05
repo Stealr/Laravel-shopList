@@ -1,0 +1,12 @@
+.user {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    color: #000;
+    border-radius: 4px;
+    transition: background-color 100ms ease;
+
+    &:hover {
+        background-color: #f8f9fa;
+    }
+}

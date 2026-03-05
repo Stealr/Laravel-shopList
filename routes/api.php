@@ -13,5 +13,3 @@ Route::prefix('catalog')->group(function () {
     Route::get('/products', [CatalogApiController::class, 'getProducts']);
 });
 
-
-// Здесь будут другие API маршруты для личного кабинета

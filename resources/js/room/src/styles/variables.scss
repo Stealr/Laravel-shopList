@@ -1,0 +1,82 @@
+$media-sizes: (
+    "xs": 480px,
+    "s": 640px,
+    "sm": 800px,
+    "m": 900px,
+    "l": 1024px,
+    "xl": 1250px,
+    "2xl": 1500px,
+     "3xl": 1920px,
+);
+
+$zIndexes: (
+    'header': 110,
+    'modal': 120,
+    'overlay': 100,
+    
+    // 'sidebar': 105,
+    // 'nav-tags': 100,
+
+    // 'popover': 120,
+    // 'overlay-above-layout': 115,
+    // 'overlay-below-layout': 104,
+);
+
+
+$mobile-fields: 1.5rem;
+$desktop-fields: 8rem;
+$max-width-container: 151.5rem;
+
+$header-height: 7rem;
+
+// $aspect-width: 10;
+// $aspect-height: 7;
+
+$aspect-width: 1.43;
+$aspect-height: 1;
+
+
+// цвета холодная тема
+$gradient_main: #7F5FB9, #1D7DC5;
+$primary: #1D7DC5;
+$primary-hover: #1993f0;
+$secondary: #560EB3;
+$secondary-hover: #34096D;
+$secondary-disabled: #b4b4b485;
+$background: #F9F8F6;
+$card-background: #FFFFFF;
+$accent-black: #000000;
+$accent-white: #FFFFFF;
+$muted-tag: #3C3C3C;
+$male: #0E005C;
+$female: #5B004D;
+$error: red;
+
+$danger: #A70000;
+$success: #2AA700;
+$warning: #A79900;
+
+$boosted: #f1f7ff;
+
+// цвета теплая тема
+// $gradient_main: #EC8802, #990FAE;
+// $primary: #EE8800;
+// $secondary: #560EB3;
+// $background: #F9F8F6;
+// $card-background: #FFFFFF;
+// $secondary-hover: #34096D;
+// $accent-black: #000000;
+// $accent-white: #FFFFFF;
+// $muted-tag: #3C3C3C;
+// $male: #0E005C;
+// $female: #5B004D;
+
+
+$dividing-line: #F4F4F4;
+$border: #D9D9D9;
+$border-hover: #b3b3b3;
+$text-placeholder: #BCBCBC;
+
+$card-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+
+//! добавить alert colors

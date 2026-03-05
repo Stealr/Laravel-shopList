@@ -1,0 +1,232 @@
+// Base font families
+$font-family-title: 'Roboto', sans-serif;
+$font-family-primary: 'Lato', sans-serif;
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-extraBold: 800;
+
+// Hero Section Title
+$hero-section-title-font-size: 4.0rem;
+$hero-section-title-line-height: 4.8rem;
+$hero-section-title-font-weight: $font-weight-extraBold;
+$hero-section-title-letter-spacing: 0;
+
+// Title
+$title-font-size: 3.2rem;
+$title-line-height: 3.8rem;
+$title-font-weight: $font-weight-bold;
+$title-letter-spacing: 0;
+
+// Subtitle
+$subtitle-font-size: 2.2rem;
+$subtitle-line-height: 2.6rem;
+$subtitle-font-weight: $font-weight-bold;
+$subtitle-letter-spacing: 0;
+
+// Body Large
+$body-large-font-size: 1.8rem;
+$body-large-line-height: 2.1rem;
+$body-large-font-weight: $font-weight-bold;
+$body-large-letter-spacing: 0;
+
+// Body Medium
+$body-medium-font-size: 1.6rem;
+$body-medium-line-height: 1.9rem;
+$body-medium-font-weight: $font-weight-bold;
+$body-medium-letter-spacing: 0;
+
+// Body Small
+$body-small-font-size: 1.4rem;
+$body-small-line-height: 1.7rem;
+$body-small-font-weight: $font-weight-medium;
+$body-small-letter-spacing: 0;
+
+// Body Small Accent
+$body-small-accent-font-size: 1.4rem;
+$body-small-accent-line-height: 1.7rem;
+$body-small-accent-font-weight: $font-weight-bold;
+$body-small-accent-letter-spacing: 0;
+
+// Header
+$header-font-size: 1.8rem;
+$header-line-height: 2.2rem;
+$header-font-weight: $font-weight-bold;
+$header-letter-spacing: 0.05rem;
+
+// Text, descriptions (with line height)
+$text-22-height-font-size: 1.6rem;
+$text-22-height-line-height: 2.2rem;
+$text-22-height-font-weight: $font-weight-regular;
+$text-22-height-letter-spacing: 0;
+
+// Text, descriptions without line height
+$text-22-height-no-lh-font-size: 1.6rem;
+$text-22-height-no-lh-line-height: normal;
+$text-22-height-no-lh-font-weight: $font-weight-regular;
+$text-22-height-no-lh-letter-spacing: 0;
+
+// Button Text
+$button-text-font-size: 1.6rem;
+$button-text-line-height: 1.9rem;
+$button-text-font-weight: $font-weight-medium;
+$button-text-letter-spacing: 0;
+
+// Placeholder Text
+$placeholder-text-font-size: 1.2rem;
+$placeholder-text-line-height: 1.4rem;
+$placeholder-text-font-weight: $font-weight-regular;
+$placeholder-text-letter-spacing: 0;
+
+// Base typography mixin
+@mixin typography-style($font-size, $line-height, $font-weight, $letter-spacing) {
+    font-family: $font-family-primary;
+    font-size: $font-size;
+    line-height: calc($line-height / $font-size);
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+}
+
+// Typography mixins
+@mixin hero-section-title {
+    font-family: $font-family-primary;
+    font-size: var(--hero-section-title-font-size);
+    line-height: var(--hero-section-title-line-height);
+    font-weight: $font-weight-extraBold;
+    letter-spacing: 0;
+}
+
+@mixin title {
+    font-family: $font-family-primary;
+    font-size: var(--title-font-size);
+    line-height: var(--title-line-height);
+    font-weight: $font-weight-bold;
+    letter-spacing: 0;
+}
+
+@mixin subtitle {
+    font-family: $font-family-primary;
+    font-size: var(--subtitle-font-size);
+    line-height: var(--subtitle-line-height);
+    font-weight: $font-weight-bold;
+    letter-spacing: 0;
+}
+
+@mixin body-large {
+    font-family: $font-family-primary;
+    font-size: var(--body-large-font-size);
+    line-height: var(--body-large-line-height);
+    font-weight: $font-weight-bold;
+    letter-spacing: 0;
+}
+
+@mixin body-medium {
+    font-family: $font-family-primary;
+    font-size: var(--body-medium-font-size);
+    line-height: var(--body-medium-line-height);
+    font-weight: $font-weight-bold;
+    letter-spacing: 0;
+}
+
+@mixin body-small {
+    font-family: $font-family-primary;
+    font-size: var(--body-small-font-size);
+    line-height: var(--body-small-line-height);
+    font-weight: $font-weight-medium;
+    letter-spacing: 0;
+}
+
+@mixin body-small-accent {
+    font-family: $font-family-primary;
+    font-size: var(--body-small-font-size);
+    line-height: var(--body-small-line-height);
+    font-weight: $font-weight-bold;
+    letter-spacing: 0;
+}
+
+@mixin header {
+    font-family: $font-family-primary;
+    font-size: var(--header-font-size);
+    line-height: var(--header-line-height);
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.05rem;
+}
+
+@mixin text-22-height {
+    font-family: $font-family-primary;
+    font-size: var(--text-font-size);
+    line-height: var(--text-line-height);
+    font-weight: $font-weight-regular;
+    letter-spacing: 0;
+}
+
+@mixin text {
+    font-family: $font-family-primary;
+    font-size: var(--text-font-size);
+    line-height: normal;
+    font-weight: $font-weight-regular;
+    letter-spacing: 0;
+}
+
+@mixin button-text {
+    font-family: $font-family-primary;
+    font-size: var(--button-text-font-size);
+    line-height: var(--button-text-line-height);
+    font-weight: $font-weight-medium;
+    letter-spacing: 0;
+}
+
+@mixin placeholder-text {
+    font-family: $font-family-primary;
+    font-size: var(--placeholder-text-font-size);
+    line-height: var(--placeholder-text-line-height);
+    font-weight: $font-weight-regular;
+    letter-spacing: 0;
+}
+
+// Usage examples:
+// .hero-title {
+//     @include hero-section-title;
+// }
+//
+// .main-title {
+//     @include title;
+// }
+//
+// .section-subtitle {
+//     @include subtitle;
+// }
+//
+// .content-text {
+//     @include body-medium;
+// }
+//
+// .small-text {
+//     @include body-small;
+// }
+//
+// .accent-text {
+//     @include body-small-accent;
+// }
+//
+// .page-header {
+//     @include header;
+// }
+//
+// .description {
+//     @include text-22-height;
+// }
+//
+// .description-compact {
+//     @include text;
+// }
+//
+// .btn-label {
+//     @include button-text;
+// }
+//
+// .form-placeholder {
+//     @include placeholder-text;
+// }
